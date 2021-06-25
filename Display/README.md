@@ -28,3 +28,6 @@ This board also has the Speaker as per the standard TEC-1 and as an additional b
 
 Lastly, for use in BitBanging serial communications, or using the MAX7219 display modules, the Latched outputs from the Segment driver are thrown back to the RC-2014 bus. Strictly speaking, this makes the card NOT compatible with the 16 bit range of Z80 cards, as the Latched outputs (L0 to L7) are sent to the bus on D8 to D15.
 But who works with 16 bit Z80s and needs 7 segment displays, right?
+
+![image](https://user-images.githubusercontent.com/13119623/123432669-f5b30080-d60d-11eb-85b7-05e178a6d0dd.png)
+
