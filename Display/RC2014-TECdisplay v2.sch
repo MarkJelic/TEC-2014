@@ -1148,12 +1148,7 @@ Wire Wire Line
 	6150 3650 6250 3650
 Wire Wire Line
 	6450 3650 6550 3650
-Wire Wire Line
-	6650 3650 6550 3650
-Wire Wire Line
-	6650 3050 6650 3650
 Connection ~ 6550 3650
-Connection ~ 6650 3650
 $Comp
 L Device:R_Network05_US RN1
 U 1 1 60644709
@@ -1192,8 +1187,6 @@ Wire Wire Line
 Connection ~ 7650 3950
 Wire Wire Line
 	7650 3950 7700 3950
-Wire Wire Line
-	6650 3650 8200 3650
 Wire Wire Line
 	6550 3350 6150 3350
 Wire Wire Line
@@ -1406,8 +1399,7 @@ NoConn ~ 8650 3050
 NoConn ~ 8550 3050
 NoConn ~ 8450 3050
 NoConn ~ 8350 3050
-NoConn ~ 8850 2250
-NoConn ~ 8550 2250
+NoConn ~ 8650 2250
 NoConn ~ 8450 2250
 NoConn ~ 7450 2250
 NoConn ~ 7350 2250
@@ -1457,8 +1449,6 @@ NoConn ~ 5850 2250
 NoConn ~ 5750 2250
 Wire Wire Line
 	5950 3950 6050 3950
-Wire Wire Line
-	6550 3350 6550 3050
 Wire Wire Line
 	6450 3150 6450 3050
 Text Label 6450 3050 3    50   ~ 0
@@ -1512,14 +1502,6 @@ D2
 Text GLabel 5000 3650 0    50   Input ~ 0
 +5V
 Wire Wire Line
-	6550 2250 6550 3050
-Connection ~ 6550 3050
-Wire Wire Line
-	6650 2250 6650 3050
-Connection ~ 6650 3050
-Text GLabel 6650 2250 1    50   Input ~ 0
-+5V
-Wire Wire Line
 	7400 6300 7400 7600
 Wire Wire Line
 	7300 6500 7300 7650
@@ -1552,17 +1534,6 @@ Connection ~ 8200 4150
 Wire Wire Line
 	8200 4150 8200 4250
 NoConn ~ 7550 8850
-$Comp
-L ZEC-1:RC2014_BUS J1
-U 1 1 5F2B6292
-P 6850 2650
-F 0 "J1" V 6850 4725 50  0000 R CNN
-F 1 "RC2014_BUS" V 6850 2875 50  0000 R CNB
-F 2 "RC2014:RC2014_PinHeader_Horizontal" H 6759 562 50  0001 L CNN
-F 3 "~" H 6850 2650 50  0001 C CNN
-	1    6850 2650
-	0    -1   -1   0   
-$EndComp
 $Comp
 L 74xx:74HCT273 U3
 U 1 1 5FFD63C9
@@ -1637,8 +1608,6 @@ Text Label 3700 6000 0    50   ~ 0
 D
 Text Label 3700 6700 0    50   ~ 0
 E
-Text GLabel 8650 2250 1    50   Input ~ 0
-+5V
 Connection ~ 6150 3650
 Wire Wire Line
 	7050 4650 7050 4800
@@ -1675,32 +1644,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS688" H 6550 3975 50  0001 C CNN
 	1    6550 4400
 	-1   0    0    -1  
 $EndComp
-$Comp
-L power:GND #PWR0116
-U 1 1 5FA7A9D4
-P 8750 2050
-F 0 "#PWR0116" H 8750 1800 50  0001 C CNN
-F 1 "GND" H 8755 1877 50  0000 C CNN
-F 2 "" H 8750 2050 50  0001 C CNN
-F 3 "" H 8750 2050 50  0001 C CNN
-	1    8750 2050
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	8750 2250 8750 2050
-$Comp
-L power:GND #PWR0117
-U 1 1 602263CA
-P 6550 2050
-F 0 "#PWR0117" H 6550 1800 50  0001 C CNN
-F 1 "GND" H 6555 1877 50  0000 C CNN
-F 2 "" H 6550 2050 50  0001 C CNN
-F 3 "" H 6550 2050 50  0001 C CNN
-	1    6550 2050
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6550 2250 6550 2050
 $Comp
 L Jumper:Jumper_2_Open JP1
 U 1 1 62E30E01
@@ -1841,7 +1784,7 @@ L Device:Jumper_NC_Small JP2
 U 1 1 6348A974
 P 8350 2025
 F 0 "JP2" H 8275 1975 50  0000 L CNN
-F 1 "BitBang" H 8200 2100 50  0000 L CNN
+F 1 "BB TX2" H 8200 2100 50  0000 L CNN
 F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 8350 2025 50  0001 C CNN
 F 3 "~" H 8350 2025 50  0001 C CNN
 	1    8350 2025
@@ -1858,6 +1801,73 @@ Wire Wire Line
 	10950 5750 10950 5950
 Wire Wire Line
 	10350 5650 10350 5800
+Text GLabel 6650 2250 1    50   Input ~ 0
++5V
+Wire Wire Line
+	6550 3650 6650 3650
+Text GLabel 6650 3050 3    50   Input ~ 0
++5V
+$Comp
+L power:GND #PWR0116
+U 1 1 6367499D
+P 6550 2250
+F 0 "#PWR0116" H 6550 2000 50  0001 C CNN
+F 1 "GND" H 6555 2077 50  0000 C CNN
+F 2 "" H 6550 2250 50  0001 C CNN
+F 3 "" H 6550 2250 50  0001 C CNN
+	1    6550 2250
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0117
+U 1 1 60E30A5E
+P 8750 2250
+F 0 "#PWR0117" H 8750 2000 50  0001 C CNN
+F 1 "GND" H 8755 2077 50  0000 C CNN
+F 2 "" H 8750 2250 50  0001 C CNN
+F 3 "" H 8750 2250 50  0001 C CNN
+	1    8750 2250
+	-1   0    0    1   
+$EndComp
+Text GLabel 8550 2250 1    50   Input ~ 0
++5V
+Connection ~ 6650 3650
+Wire Wire Line
+	6650 3650 8200 3650
+Wire Wire Line
+	8550 2650 8550 2250
+Wire Wire Line
+	6550 3350 6550 3050
+Wire Wire Line
+	6550 2250 6550 3050
+Connection ~ 6550 3050
+Wire Wire Line
+	6650 3050 6650 3650
+Connection ~ 6650 3050
+$Comp
+L ZEC-1:RC2014_BUS J1
+U 1 1 5F2B6292
+P 6850 2650
+F 0 "J1" V 6850 4725 50  0000 R CNN
+F 1 "RC2014_BUS" V 6850 2875 50  0000 R CNB
+F 2 "RC2014:RC2014_PinHeader_Horizontal" H 6759 562 50  0001 L CNN
+F 3 "~" H 6850 2650 50  0001 C CNN
+	1    6850 2650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6650 2250 6650 3050
+Wire Wire Line
+	8200 3650 9000 3650
+Wire Wire Line
+	9000 3650 9000 1925
+Wire Wire Line
+	9000 1925 8550 1925
+Wire Wire Line
+	8550 1925 8550 2250
+Connection ~ 8200 3650
+Connection ~ 8550 2250
+NoConn ~ 8850 2250
 Wire Bus Line
 	5050 5400 8350 5400
 Wire Bus Line
