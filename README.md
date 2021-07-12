@@ -11,3 +11,6 @@ With these two modules, and a SC108 (buy it off Tindie, here: https://www.tindie
 
 3. MEMORY<br>
 But most people don't have access to an EPROM burner, so I wanted to make a TEC-2014 board that was compatible with the old MONitors, unchanged, while providing extra RAM, larger ROM (8k, up from 2k) and the ability to page the ROM out so you could run other OSes like CP/M or BASIC.
+
+# TEC-2014 SBC
+An adaption of the TEC-1 to have part of the DAT board (the buffer/latch) to remove the JMON resistor and to enable some basic BitBangin' Serial. Also has (mostly) the standard (40 pin) connector that is popularised by the RC-2014.  But it may be prudent to go the full 80pin connector. Will see how the trace routing of the 40 pins goes, first. :)
