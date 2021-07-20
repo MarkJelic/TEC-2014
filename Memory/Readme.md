@@ -10,4 +10,8 @@ It should end up looking like this:
 
 Don't forget to hit the RUN/Stop button (if it is Red it means the simulator is not running)
 Then click on the Address Lines A11 to A15 to simulate different address ranges being read by the Z80.
-Unfortunately the 72ls138 module doesn't work automatically, so you have to manually click the H or L to select (Low) one of the 8k banks it would decode from the Address lines A13 to A15.
+Unfortunately the 74ls138 module doesn't work automatically, so you have to manually click the H or L inside the block to select (Low) one of the 8k banks it would decode from the Address lines A13 to A15.
+
+The simulation is assuming you have a 16k ROM chip and a 16K RAM chip. But this is flexible; just add two more diodes if the RAM chip is a 32k chip, for example.
+
+The lower 2K of the ROM is what is Shadowed in on Reset so that it is compatible with the TEC-1 monitors. With the diodes, you can select where the ROM starts and how large it is, in 8k blocks. Only have an 8k ROM sitting right at the top of 64k? Then only have one diode going from the top bank select line of the 138. (In that config you don't even need a diode - just connect the select line of the 138 direct to the gate.)
