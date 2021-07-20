@@ -4,14 +4,14 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "TEC-2014 Memory"
+Date "2021-07-20"
+Rev "v.1.0"
+Comp "Mark Jelic, 2021"
 Comment1 ""
 Comment2 ""
-Comment3 ""
-Comment4 ""
+Comment3 "by John Hardy & Ken Stone, 1983"
+Comment4 "Based on the design of the TEC-1"
 $EndDescr
 $Comp
 L power:GND #PWR0110
@@ -217,21 +217,8 @@ Wire Wire Line
 	11975 7800 11975 4800
 Wire Wire Line
 	11975 4800 8425 4800
-Wire Wire Line
-	7400 5275 7400 5125
-Text GLabel 7400 5125 2    50   Input ~ 0
+Text GLabel 7400 5275 1    50   Input ~ 0
 +5V
-Wire Wire Line
-	6900 6025 6875 6025
-Wire Wire Line
-	6875 6025 6875 5525
-Wire Wire Line
-	6875 5525 6900 5525
-Wire Wire Line
-	6875 5525 6875 5125
-Wire Wire Line
-	6875 5125 7400 5125
-Connection ~ 6875 5525
 $Comp
 L ZEC-1:74LS688 U3
 U 1 1 5FAB9298
@@ -981,20 +968,14 @@ Wire Wire Line
 	8625 3650 8400 3650
 Wire Wire Line
 	8625 2450 8400 2450
-Wire Wire Line
-	5750 5350 4700 5350
 Entry Wire Line
-	6650 5725 6550 5625
-Text Label 6650 5725 0    50   ~ 0
+	6650 6225 6550 6125
+Text Label 6650 5625 0    50   ~ 0
 M1
 Wire Wire Line
-	6900 5725 6650 5725
-Entry Wire Line
-	6550 6125 6650 6225
+	6900 6225 6650 6225
 Text Label 6650 6225 0    50   ~ 0
 D0
-Wire Wire Line
-	6900 6225 6650 6225
 Entry Wire Line
 	6550 7700 6650 7800
 Text Label 6650 7800 0    50   ~ 0
@@ -1035,12 +1016,6 @@ Entry Wire Line
 	6550 5325 6650 5425
 Text Label 6650 5425 0    50   ~ 0
 RESET
-Wire Wire Line
-	6900 6125 6725 6125
-Wire Wire Line
-	6725 6125 6725 6025
-Wire Wire Line
-	6725 6025 5750 6025
 Wire Wire Line
 	6900 5625 6650 5625
 $Comp
@@ -1342,30 +1317,28 @@ Wire Wire Line
 	8225 8000 8525 8000
 Wire Wire Line
 	8225 8100 8525 8100
-Text Notes 7800 6025 0    50   ~ 0
+Text Notes 7950 6025 0    50   ~ 0
 On RESET, Q=Lo
 $Comp
 L power:GND #PWR0115
 U 1 1 5FB8FA4F
-P 8725 6225
-F 0 "#PWR0115" H 8725 5975 50  0001 C CNN
-F 1 "GND" H 8730 6052 50  0000 C CNN
-F 2 "" H 8725 6225 50  0001 C CNN
-F 3 "" H 8725 6225 50  0001 C CNN
-	1    8725 6225
+P 8850 5975
+F 0 "#PWR0115" H 8850 5725 50  0001 C CNN
+F 1 "GND" H 8855 5802 50  0000 C CNN
+F 2 "" H 8850 5975 50  0001 C CNN
+F 3 "" H 8850 5975 50  0001 C CNN
+	1    8850 5975
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	7850 5925 7925 5925
 $Comp
 L Diode:1N4148 D3
 U 1 1 5FC81AE3
-P 8225 6600
-F 0 "D3" H 8225 6816 50  0001 C CNN
-F 1 "1N4148" H 8225 6725 50  0001 C CNN
-F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 8225 6425 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8225 6600 50  0001 C CNN
-	1    8225 6600
+P 8075 6600
+F 0 "D3" H 8075 6816 50  0001 C CNN
+F 1 "1N4148" H 8075 6725 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 8075 6425 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 8075 6600 50  0001 C CNN
+	1    8075 6600
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -1465,10 +1438,6 @@ Wire Wire Line
 Wire Wire Line
 	8775 7100 8375 7100
 Wire Wire Line
-	8075 6600 7925 6600
-Wire Wire Line
-	7925 5925 7925 6600
-Wire Wire Line
 	6650 6800 8075 6800
 Wire Wire Line
 	6650 6900 8075 6900
@@ -1502,17 +1471,6 @@ Entry Wire Line
 	8125 8500 8225 8400
 Text Label 8225 8400 0    50   ~ 0
 BS2
-$Comp
-L ZEC-1:AT28C256 U1
-U 1 1 6008D3E3
-P 7400 3350
-F 0 "U1" H 7650 4400 50  0000 C CNN
-F 1 "AT28C256" V 7400 3350 50  0000 C CNB
-F 2 "Socket:DIP_Socket-28_W11.9_W12.7_W15.24_W17.78_W18.5_3M_228-1277-00-0602J" H 7400 3350 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0006.pdf" H 7400 3350 50  0001 C CNN
-	1    7400 3350
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6775 4250 6900 4250
 Entry Wire Line
@@ -1617,13 +1575,9 @@ RESET
 Wire Wire Line
 	6650 5925 6900 5925
 Entry Wire Line
-	6550 4875 6650 4975
-Text Label 6650 4975 0    50   ~ 0
+	6550 4900 6650 5000
+Text Label 6650 5000 0    50   ~ 0
 INT
-Wire Wire Line
-	7850 5475 7850 4975
-Wire Wire Line
-	6650 4975 7850 4975
 $Comp
 L Device:R_Small_US R1
 U 1 1 5FEAE0E9
@@ -1650,17 +1604,6 @@ Wire Wire Line
 	7850 5725 8125 5725
 Wire Wire Line
 	8625 5725 8725 5725
-$Comp
-L power:GND #PWR0101
-U 1 1 5FEAE0F7
-P 8725 5725
-F 0 "#PWR0101" H 8725 5475 50  0001 C CNN
-F 1 "GND" H 8730 5552 50  0000 C CNN
-F 2 "" H 8725 5725 50  0001 C CNN
-F 3 "" H 8725 5725 50  0001 C CNN
-	1    8725 5725
-	-1   0    0    -1  
-$EndComp
 Entry Wire Line
 	1700 5875 1800 5975
 Wire Wire Line
@@ -1680,30 +1623,8 @@ F 3 "" H 2975 6175 50  0001 C CNN
 	1    2975 6175
 	0    -1   -1   0   
 $EndComp
-Text Notes 7875 5250 0    50   ~ 0
-USR1 is a latched output \nthat can be used for BitBang serial\nor single stepping code.
-$Comp
-L ZEC-1:27C64 U?
-U 1 1 60485EF0
-P 11025 3225
-F 0 "U?" H 11025 4406 50  0000 C CNN
-F 1 "27C64" H 11025 4315 50  0000 C CNB
-F 2 "Package_DIP:DIP-28_W15.24mm" V 11075 3150 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/11107M.pdf" H 11025 3225 50  0001 C CNN
-	1    11025 3225
-	1    0    0    -1  
-$EndComp
-$Comp
-L Memory_NVRAM:FM16W08-SG U?
-U 1 1 604882A5
-P 12525 2950
-F 0 "U?" H 12525 3931 50  0000 C CNN
-F 1 "FM16W08-SG" H 12525 3840 50  0000 C CNN
-F 2 "Package_SO:SOIC-28W_7.5x17.9mm_P1.27mm" H 12525 2950 50  0001 C CNN
-F 3 "http://www.cypress.com/file/41731/download" H 12525 2950 50  0001 C CNN
-	1    12525 2950
-	1    0    0    -1  
-$EndComp
+Text Notes 7875 5350 0    50   ~ 0
+This FlipFlop used for Single Stepping\nthrough Code, triggering INT on each memory\nread cycle if the ROM is not selected.\nUse the switch to disable Stepper.
 Text Notes 9300 6900 0    50   ~ 0
 This line is asserted HIGH when the Memory Latch is Low, \nAND all the upper address lines are Low, \nmeaning the CPU is addressing the lowest 2K range,\nwhich is where the TEC-1 ROMs were placed.
 Text Notes 8300 9750 0    50   ~ 0
@@ -1936,10 +1857,106 @@ Wire Wire Line
 	3425 6800 3325 6800
 Wire Wire Line
 	3625 6800 3725 6800
-Wire Wire Line
-	5750 5350 5750 6025
+Text GLabel 6900 5525 0    50   Input ~ 0
++5V
 Entry Wire Line
-	6650 5625 6550 5525
+	6550 5525 6650 5625
+Wire Wire Line
+	7850 5000 7850 5475
+Wire Wire Line
+	7850 5925 7925 5925
+Wire Wire Line
+	7925 5925 7925 6600
+Wire Wire Line
+	6775 4700 6350 4700
+Connection ~ 6775 4700
+Wire Wire Line
+	8725 5725 8725 5975
+Wire Wire Line
+	8850 5975 8725 5975
+Connection ~ 8725 5975
+Wire Wire Line
+	8725 5975 8725 6225
+Text GLabel 6900 6025 0    50   Input ~ 0
++5V
+Wire Wire Line
+	8375 6600 8225 6600
+Wire Wire Line
+	7850 5000 6650 5000
+Wire Wire Line
+	4700 6050 6625 6050
+Wire Wire Line
+	6625 6050 6625 6125
+Wire Wire Line
+	6625 6125 6900 6125
+Wire Wire Line
+	6350 5725 6900 5725
+$Comp
+L Device:R_Small_US R6
+U 1 1 61A44B98
+P 6250 5725
+F 0 "R6" V 6150 5725 50  0000 C CNN
+F 1 "10K" V 6350 5725 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" H 6250 5725 50  0001 C CNN
+F 3 "~" H 6250 5725 50  0001 C CNN
+	1    6250 5725
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Switch:SW_SPST SW1
+U 1 1 61ABE92E
+P 6350 5275
+F 0 "SW1" H 6350 5225 50  0000 C CNN
+F 1 "STEP" H 6350 5419 50  0000 C CNN
+F 2 "" H 6350 5275 50  0001 C CNN
+F 3 "~" H 6350 5275 50  0001 C CNN
+	1    6350 5275
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4700 5350 4700 6050
+$Comp
+L power:GND #PWR?
+U 1 1 61BE6569
+P 6150 5725
+F 0 "#PWR?" H 6150 5475 50  0001 C CNN
+F 1 "GND" H 6155 5552 50  0000 C CNN
+F 2 "" H 6150 5725 50  0001 C CNN
+F 3 "" H 6150 5725 50  0001 C CNN
+	1    6150 5725
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 5475 6350 5725
+Connection ~ 6350 5725
+$Comp
+L Diode:1N4148 D?
+U 1 1 61C2E977
+P 6350 4850
+F 0 "D?" H 6350 5066 50  0001 C CNN
+F 1 "1N4148" H 6350 4975 50  0001 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal" H 6350 4675 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 6350 4850 50  0001 C CNN
+	1    6350 4850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6350 5075 6350 5000
+Text Notes 8550 6350 0    50   ~ 0
+on = ROM Shadowed
+Text Notes 3950 3900 0    50   ~ 0
+To remove the Shadowed ROM, an OUTput of $00\nto the Port specified by the jumpers Flips the\nFlop off and removes the ROM from lower 2K.\n(It is possible to Shadow it back in with an OUTput of $01)
+$Comp
+L ZEC-1:AT28C64 U1
+U 1 1 61DD86E5
+P 7400 3350
+F 0 "U1" H 7650 4400 50  0000 C CNN
+F 1 "AT28C64" V 7400 3350 50  0000 C CNB
+F 2 "Socket:DIP_Socket-28_W11.9_W12.7_W15.24_W17.78_W18.5_3M_228-1277-00-0602J" H 7400 3350 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0006.pdf" H 7400 3350 50  0001 C CNN
+	1    7400 3350
+	1    0    0    -1  
+$EndComp
 Wire Bus Line
 	9975 1875 9975 3050
 Wire Bus Line
