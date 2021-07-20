@@ -3,7 +3,8 @@ Most people don't have access to an EPROM burner, so I wanted to make a TEC-2014
 
 ![image](https://user-images.githubusercontent.com/13119623/125277121-63706380-e354-11eb-8323-b4ebb22897b1.png)
 
-To test the logic of when the ROM is Shadowed in (on Reset) and flipped out (send an Out command to the correct IO port that is connected to the Flip Flop) load the text file into this Circuit Testing website:  https://www.falstad.com/circuit/
+To test the logic of when the ROM is Shadowed in (on Reset) and flipped out (send an Out command to the correct IO port that is connected to the Flip Flop) load the text file (called Shadow ROM Memory Select Circuit Tester.txt) into this Circuit Testing website:  https://www.falstad.com/circuit/
+Alternatively, try using this direct link that hopefully loads the circuit automatically: https://tinyurl.com/yg5vtw98
 
 It should end up looking like this:
 ![image](https://user-images.githubusercontent.com/13119623/126243217-eca422d6-c39d-451c-9cea-d2222d083774.png)
